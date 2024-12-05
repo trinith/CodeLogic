@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E78263AF-D3D7-4BF6-84E3-41DEB78A2285}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ArbitraryPixel.CodeLogic.Common</RootNamespace>
+    <AssemblyName>ArbitraryPixel.CodeLogic.Common</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkProfile>Profile44</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Internal|AnyCPU' ">
+    <OutputPath>bin\Internal\</OutputPath>
+    <DefineConstants>TRACE;RENDER_BUILDINFO_OVERLAY</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseRevision|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseMinor|AnyCPU'">
+    <OutputPath>bin\ReleaseMinor\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BriefingContent\BriefingPage_AttemptHistory.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Chapter1.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Chapter2.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Chapter3.cs" />
+    <Compile Include="BriefingContent\BriefingPage_CodeInput.cs" />
+    <Compile Include="BriefingContent\BriefingPage_CodeOverview.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Cover.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Bootup.cs" />
+    <Compile Include="BriefingContent\BriefingPage_DeviceMenu.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Examples1.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Examples2.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Objective.cs" />
+    <Compile Include="BriefingContent\BriefingPage_Overview.cs" />
+    <Compile Include="BriefingContent\BriefingPage_CurrentAttemptIndicator.cs" />
+    <Compile Include="BriefingContent\BriefingPage_ResultsOverview.cs" />
+    <Compile Include="BriefingContent\BriefingPage_SubmitButton.cs" />
+    <Compile Include="BriefingContent\BriefingContentsPage.cs" />
+    <Compile Include="CodeLogicEngine.cs" />
+    <Compile Include="Config\CodeLogicSettings.cs" />
+    <Compile Include="Config\GameStatsData.cs" />
+    <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="Controllers\CloudControllerFactory.cs" />
+    <Compile Include="Controllers\CloudFlashController.cs" />
+    <Compile Include="Controllers\CloudIntensityController.cs" />
+    <Compile Include="Controllers\CloudMovementController.cs" />
+    <Compile Include="Controllers\DelayedDialogController.cs" />
+    <Compile Include="Controllers\GameStatsController.cs" />
+    <Compile Include="Controllers\IController.cs" />
+    <Compile Include="Controllers\LayerFadeController.cs" />
+    <Compile Include="Controllers\PlaneLandingController.cs" />
+    <Compile Include="Controllers\PlanePositionController.cs" />
+    <Compile Include="Controllers\SoundPlaybackController.cs" />
+    <Compile Include="Credits\CreditLineItem.cs" />
+    <Compile Include="Credits\CreditsContent.cs" />
+    <Compile Include="Entities\ChapterButton.cs" />
+    <Compile Include="Entities\CheckButton.cs" />
+    <Compile Include="Entities\Cloud.cs" />
+    <Compile Include="Entities\ConsoleWindow.cs" />
+    <Compile Include="Entities\DeviceMenuButton.cs" />
+    <Compile Include="Entities\ProgressBar.cs" />
+    <Compile Include="Entities\ScreenFadeOverlay.cs" />
+    <Compile Include="Entities\SequenceAttemptRecordView.cs" />
+    <Compile Include="Entities\SimpleButton.cs" />
+    <Compile Include="Entities\Slider.cs" />
+    <Compile Include="Entities\StatusBar.cs" />
+    <Compile Include="Entities\StatusIndicator.cs" />
+    <Compile Include="Entities\DeviceBackground.cs" />
+    <Compile Include="Entities\CodeInputButton.cs" />
+    <Compile Include="Entities\SequenceSubmitButton.cs" />
+    <Compile Include="Entities\TapScreenText.cs" />
+    <Compile Include="Entities\TextureEntity.cs" />
+    <Compile Include="Entities\TextureEntityFactory.cs" />
+    <Compile Include="EntityGenerators\CloudCoverGenerator.cs" />
+    <Compile Include="EntityGenerators\IEntityGenerator.cs" />
+    <Compile Include="ITargetPlatform.cs" />
+    <Compile Include="Layers\BuildInfoOverlayLayer.cs" />
+    <Compile Include="Layers\CloudCoverLayer.cs" />
+    <Compile Include="Layers\CodeInputLayer.cs" />
+    <Compile Include="Layers\DeviceMainUILayer.cs" />
+    <Compile Include="Layers\DeviceMenuUILayer.cs" />
+    <Compile Include="Layers\LogPanelContentLayer.cs" />
+    <Compile Include="Layers\LogPanelLayer.cs" />
+    <Compile Include="Layers\MenuBackgroundLayer.cs" />
+    <Compile Include="Layers\MenuBriefingContentLayer.cs" />
+    <Compile Include="Layers\MenuBriefingUILayer.cs" />
+    <Compile Include="Layers\MenuPlaceholderBackgroundLayer.cs" />
+    <Compile Include="Layers\MenuContentLayerBase.cs" />
+    <Compile Include="Layers\MenuCreditsContentLayer.cs" />
+    <Compile Include="Layers\MenuExitContentLayer.cs" />
+    <Compile Include="Layers\MenuSettingsContentLayer.cs" />
+    <Compile Include="Layers\MenuSinglePlayerContentLayer.cs" />
+    <Compile Include="Layers\MenuStatsContentLayer.cs" />
+    <Compile Include="Layers\ProgressLayer.cs" />
+    <Compile Include="MainGame.cs" />
+    <Compile Include="Model\AlarmLevel.cs" />
+    <Compile Include="Model\BuildInfoOverlayLayerModel.cs" />
+    <Compile Include="Model\BuildInfoStore.cs" />
+    <Compile Include="Model\CodeInputButtonModel.cs" />
+    <Compile Include="Model\CodeSequence.cs" />
+    <Compile Include="Model\CodeValue.cs" />
+    <Compile Include="Model\CodeValueColourMap.cs" />
+    <Compile Include="Model\DeviceModel.cs" />
+    <Compile Include="Model\FadeMode.cs" />
+    <Compile Include="Model\FadeSceneTransitionModel.cs" />
+    <Compile Include="Model\GameStatsModel.cs" />
+    <Compile Include="Model\ICodeSequence.cs" />
+    <Compile Include="Model\ICodeValueColourMap.cs" />
+    <Compile Include="Model\IDeviceModel.cs" />
+    <Compile Include="Model\IGameStatsModel.cs" />
+    <Compile Include="Model\ISequenceComparer.cs" />
+    <Compile Include="Model\LogPanelModel.cs" />
+    <Compile Include="Model\MainMenuContentLayerFactory.cs" />
+    <Compile Include="Model\MenuContentMap.cs" />
+    <Compile Include="Model\MainMenuModel.cs" />
+    <Compile Include="Model\MissionDebriefAttemptRecordMarksBuilder.cs" />
+    <Compile Include="Model\MissionDebriefHistoryMarksBuilder.cs" />
+    <Compile Include="Model\PanSceneTransitionModel.cs" />
+    <Compile Include="Model\SceneTransitionModel.cs" />
+    <Compile Include="Model\SequenceAttemptCollection.cs" />
+    <Compile Include="Model\SequenceAttemptRecord.cs" />
+    <Compile Include="Model\SequenceComparer.cs" />
+    <Compile Include="Model\SequenceCompareResult.cs" />
+    <Compile Include="Model\SequenceIndexCompareResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scenes\DeviceAssetLoadScene.cs" />
+    <Compile Include="Scenes\DeviceBootScene.cs" />
+    <Compile Include="Scenes\DeviceMainScene.cs" />
+    <Compile Include="GameObjectFactory.cs" />
+    <Compile Include="Scenes\DeviceMenuScene.cs" />
+    <Compile Include="Scenes\FadeSceneTransition.cs" />
+    <Compile Include="Scenes\GameStartupScene.cs" />
+    <Compile Include="Scenes\MainMenuScene.cs" />
+    <Compile Include="Scenes\MissionDebriefingScene.cs" />
+    <Compile Include="Scenes\NoAdMessageScene.cs" />
+    <Compile Include="Scenes\PanSceneTransition.cs" />
+    <Compile Include="Scenes\PreGameAdScene.cs" />
+    <Compile Include="Scenes\SceneTransition.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Scenes\SplashScreenScene.cs" />
+    <Compile Include="Theme\CodeLogicTheme.cs" />
+    <Compile Include="Theme\CodeLogicThemeCollection.cs" />
+    <Compile Include="Theme\Device\DeviceAgentTheme.cs" />
+    <Compile Include="Theme\Device\DeviceThemeManager.cs" />
+    <Compile Include="Theme\Device\IDeviceTheme.cs" />
+    <Compile Include="Theme\ThemeObjectType.cs" />
+    <Compile Include="Theme\ThemeType.cs" />
+    <Compile Include="UI\AudioControlsFactory.cs" />
+    <Compile Include="UI\AudioControlsFactoryResult.cs" />
+    <Compile Include="UI\Dialog.cs" />
+    <Compile Include="UI\IDialog.cs" />
+    <Compile Include="UI\IMenuFactory.cs" />
+    <Compile Include="UI\IMenuItem.cs" />
+    <Compile Include="UI\IMenuItemView.cs" />
+    <Compile Include="UI\IMenuListView.cs" />
+    <Compile Include="UI\IMenuView.cs" />
+    <Compile Include="UI\MenuFactory.cs" />
+    <Compile Include="UI\MenuItem.cs" />
+    <Compile Include="UI\MenuItemEventArgs.cs" />
+    <Compile Include="UI\MenuItemView.cs" />
+    <Compile Include="UI\MenuTitleView.cs" />
+    <Compile Include="UI\MenuListView.cs" />
+    <Compile Include="UI\MenuViewBase.cs" />
+    <Compile Include="UI\OkCancelDialog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ArbitraryPixel.Common">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Advertising">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Advertising.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Audio">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Audio.MonoGame">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Audio.MonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.ContentManagement">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.ContentManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.ContentManagement.MonoGame">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.ContentManagement.MonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Drawing">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Graphics">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Graphics.MonoGame">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Graphics.MonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Input">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Json">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Json.JsonDotNET">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Json.JsonDotNET.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.Screen">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.Screen.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.SimpleFileSystem">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.SimpleFileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Common.SimpleFileSystem.PCLPortable">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Common.SimpleFileSystem.PCLPortable.dll</HintPath>
+    </Reference>
+    <Reference Include="ArbitraryPixel.Platform2D">
+      <HintPath>..\..\..\..\Libraries\bin\ArbitraryPixel.Platform2D.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.4\lib\netstandard1.0\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.Portable.3.7.1.189\lib\portable-net45+win8+wpa81\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>echo $(ConfigurationName)
+
+if $(ConfigurationName) == Debug (
+  echo Running Debug Pre-build
+  "%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Community\Common7\IDE\TextTransform.exe" -a !!build!true -a !!titleTag!Debug "$(ProjectDir)Properties\AssemblyInfo.tt"
+)
+
+if $(ConfigurationName) == Internal (
+  echo Running Internal Pre-build
+  "%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Community\Common7\IDE\TextTransform.exe" -a !!build!true -a !!titleTag!Internal "$(ProjectDir)Properties\AssemblyInfo.tt"
+)
+
+if $(ConfigurationName) == Release (
+  echo Running Release Pre-build
+  "%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Community\Common7\IDE\TextTransform.exe" -a !!major!true -a !!resetMinor!true -a !!resetRevision!true -a !!build!true -a !!titleTag!Release "$(ProjectDir)Properties\AssemblyInfo.tt"
+)
+
+if $(ConfigurationName) == ReleaseMinor (
+  echo Running ReleaseMinor Pre-build
+  "%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Community\Common7\IDE\TextTransform.exe" -a !!minor!true -a !!resetRevision!true -a !!build!true -a !!titleTag!Release "$(ProjectDir)Properties\AssemblyInfo.tt"
+)
+
+if $(ConfigurationName) == ReleaseRevision (
+  echo Running ReleaseRevision Pre-build
+  "%25ProgramFiles(x86)%25\Microsoft Visual Studio\2017\Community\Common7\IDE\TextTransform.exe" -a !!revision!true -a !!build!true -a !!titleTag!Release "$(ProjectDir)Properties\AssemblyInfo.tt"
+)</PreBuildEvent>
+  </PropertyGroup>
+</Project>
